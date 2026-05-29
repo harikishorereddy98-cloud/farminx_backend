@@ -13,9 +13,9 @@ except ImportError:
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
-if 'RENDER_EXTERNAL_HOSTNAME' in os.environ:
-    ALLOWED_HOSTS.append(os.environ.get('RENDER_EXTERNAL_HOSTNAME'))
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost', '127.0.0.1']
+if 'VERCEL_URL' in os.environ:
+    ALLOWED_HOSTS.append(os.environ.get('VERCEL_URL'))
 
 INSTALLED_APPS = [
     'django.contrib.admin',
